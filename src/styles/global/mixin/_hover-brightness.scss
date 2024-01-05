@@ -1,0 +1,22 @@
+@use 'sass:math';
+
+// **********************************************
+// ホバー時の処理
+// マウスホバー時に要素を明るくして拡大する
+// **********************************************
+// 使い方
+// ----------------------------------------------
+// .l-test {
+//   @include hover-brightness();
+// }
+@mixin hover-brightness() {
+  transition:
+    filter 300ms linear,
+    transform 300ms linear;
+
+  &:hover {
+    filter: brightness(120%);
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}

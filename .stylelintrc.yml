@@ -1,0 +1,15 @@
+extends:
+  - 'stylelint-config-standard'
+  - 'stylelint-config-standard-scss'
+  - 'stylelint-config-recess-order'
+  - 'stylelint-config-html'
+  - 'stylelint-prettier/recommended'
+plugins:
+  - 'stylelint-scss'
+syntax:
+  - scss
+rules:
+  font-family-no-missing-generic-family-keyword: [true, { ignoreFontFamilies: ['icons'] }]
+ignoreFiles:
+  - public/**/*.css
+  - tmp/**/*.css

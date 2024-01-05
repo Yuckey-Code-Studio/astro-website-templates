@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "ms-ceintl.vscode-language-pack-ja",
+    "oderwat.indent-rainbow",
+    "saikou9901.evilinspector",
+    "pkief.material-icon-theme",
+    "editorconfig.editorconfig",
+    "formulahendry.auto-complete-tag",
+    "christian-kohler.path-intellisense",
+    "astro-build.astro-vscode",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "stylelint.vscode-stylelint",
+    "yusukehirao.vscode-markuplint"
+  ],
+  "unwantedRecommendations": []
+}

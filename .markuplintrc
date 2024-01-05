@@ -1,0 +1,59 @@
+{
+  "parser": {
+    "\\.astro$": "@markuplint/astro-parser"
+  },
+  "extends": [
+    "markuplint:recommended"
+  ],
+  "nodeRules": [
+    {
+      "selector": "head",
+      "rules": {
+        "invalid-attr": {
+          "options": {
+            "allowAttrs": [
+              "prefix"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "selector": "meta[property]",
+      "rules": {
+        "invalid-attr": {
+          "options": {
+            "allowAttrs": [
+              "property",
+              "content"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "selector": "link",
+      "rules": {
+        "character-reference": false
+      }
+    },
+    {
+      "selector": ".l-pagetop__box",
+      "rules": {
+        "no-refer-to-non-existent-id": false
+      }
+    },
+    {
+      "selector": "source[srcset]",
+      "rules": {
+        "invalid-attr": false
+      }
+    },
+    {
+      "selector": "a[href]",
+      "rules": {
+        "character-reference": false
+      }
+    }
+  ]
+}

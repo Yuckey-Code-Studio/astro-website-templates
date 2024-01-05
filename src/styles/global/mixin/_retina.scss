@@ -1,0 +1,20 @@
+// **********************************************
+// レティナディスプレイ対応
+// ブレイクポイント関数と組合せて使用する
+// **********************************************
+// 使い方
+// ----------------------------------------------
+// .l-test {
+//   background-image: url(sp.jpg);
+//   @include mq() {
+//     background-image: url(pc@1x.jpg);
+//     @include retina() {
+//       background-image: url(pc@2x.jpg);
+//     }
+//   }
+// }
+@mixin retina() {
+  @media screen and (resolution >= 192dpi) {
+    @content;
+  }
+}

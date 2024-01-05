@@ -1,0 +1,37 @@
+// **********************************************
+// ブレイクポイント
+// SP,Tab,PCのメディアクエリ指定
+// **********************************************
+// 使い方
+// ----------------------------------------------
+// .l-test {
+//   font-size: 12px;
+//   @include mq() {
+//     font-size: 14px;
+//   }
+//   @include mq("lg") {
+//     font-suze: 16ox;
+//   }
+// }
+// prettier-ignore
+$breakpoints: (
+  "df": ( min-width: 769px ),
+  "sm": ( min-width: 560px ),
+  "md": ( min-width: 960px ),
+  "lg": ( min-width: 1440px ),
+  "xl": ( min-width: 1920px ),
+  "xxl": (min-width: 2560px )
+) !default;
+
+@mixin mq($breakpoint: df) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media screen and #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  // 定義されていない値が指定された場合はエラー
+  @else {
+    @error "指定されたブレイクポイントは定義されていません。" + "指定できるブレイクポイントは次のとおりです。 -> #{map-keys($breakpoints)}";
+  }
+}

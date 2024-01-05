@@ -1,0 +1,58 @@
+{
+  "name": "astro-website-templates",
+  "version": "1.0.0-alpha.1",
+  "description": "Astro boilerplate for static site.",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yuckey-Code-Studio/astro-website-templates.git"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "run-s compile build:astro",
+    "build:astro": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier --write src --plugin prettier-plugin-astro",
+    "lint": "run-p lint:js lint:style lint:html",
+    "lint:js": "eslint \"./src/**/*.{js,jsx,ts,tsx,astro}\" --fix --ignore-path .gitignore",
+    "lint:style": "stylelint \"./src/**/*.{css,scss,astro}\" --fix --ignore-path .gitignore",
+    "lint:html": "markuplint \"./src/**/*.{html,astro}\""
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.3.4",
+    "@astrojs/sitemap": "^3.0.4",
+    "astro": "^4.1.0",
+    "sass": "^1.69.7",
+    "the-new-css-reset": "^1.11.2",
+    "typescript": "^5.3.3"
+  },
+  "browserslist": [
+    "defaults and fully supports es6-module",
+    "maintained node versions"
+  ],
+  "devDependencies": {
+    "@markuplint/astro-parser": "^3.12.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "autoprefixer": "^10.4.16",
+    "chokidar-cli": "^3.0.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-astro": "^0.31.0",
+    "markuplint": "^3.15.0",
+    "postcss": "^8.4.33",
+    "postcss-cli": "^11.0.0",
+    "postcss-sort-media-queries": "^5.2.0",
+    "prettier": "^3.1.1",
+    "prettier-plugin-astro": "^0.12.3",
+    "stylelint": "^16.1.0",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-recess-order": "^4.4.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-prettier": "^5.0.0",
+    "stylelint-scss": "^6.0.0"
+  }
+}
